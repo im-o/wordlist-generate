@@ -1,3 +1,6 @@
-apakabar1wordlist1
-apakabar1wordlist2
-apakabar1wordlist3
+kata1wordlist1
+wordlist1kata1
+kata1wordlist2
+wordlist2kata1
+kata1wordlist3
+wordlist3kata1

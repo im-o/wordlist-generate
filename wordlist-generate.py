@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 import sys
+import time
 
+start = time.clock()
 tampung_kata = []
 tampung_wordlist = []
 def wordlisGenerate():
@@ -24,7 +26,8 @@ if __name__ == '__main__':
 		for x in tampung_kata:
 			for y in tampung_wordlist:
 				get_hasil.write("{0}{1}\n".format(x,y))
-		print("[+] Done Generate . . .\n[+] Output : output-generate.txt")
+				get_hasil.write("{0}{1}\n".format(y,x))
+		print("\n[+] Done Generate . . .\n[+] Time Generate : {} sec . .\n[+] Output Name   : output-generate.txt".format(time.clock() - start))
 
 	except Exception as e:
 		print("ada kesalahan :", e)

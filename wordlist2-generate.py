@@ -1,7 +1,9 @@
 #!/usr/bin/env python3
 
 import sys
+import time
 
+start = time.clock()
 def wordlisGenerate():
 	if len(sys.argv) < 2:
 		print("[+] Wrong usage!!\n[+] example : python3 %s <filewordlist.txt>" %(sys.argv[0]))
@@ -13,11 +15,13 @@ def wordlisGenerate():
 		with open(sys.argv[1],'r') as my_wordList:
 			for x in my_wordList:
 				get_hasil.write(input_kata+"{}\n".format(x.strip()))
+				get_hasil.write(x.strip()+"{}\n".format(input_kata))
 				# print(input_kata+"{}".format(x.strip()))
+		get_hasil.close()
 
 if __name__ == '__main__':
 	try:
 		wordlisGenerate()
-		print("[+] Done Generate . . .\n[+] Output : output-generate2.txt")
+		print("\n[+] Done Generate . . .\n[+] Time Generate : {} sec . .\n[+] Output Name   : output-generate2.txt".format(time.clock() - start))
 	except Exception as e:
 		print("ada kesalahan :", e)
